@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- File Boot Strap Style -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- File Font Awesome Style -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- File Normalize Style -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- File Master Style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Post Details</title>
+</head>
+
+<body>
+    <div class="success-toast toast-container"></div>
+    <!-- Login Modal -->
+    <div class="modal fade" id="login-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="login-user-name" class="col-form-label">Username:</label>
+                            <input type="text" class="form-control" id="login-user-name" value="ismailii">
+                        </div>
+                        <div class="mb-3">
+                            <label for="login-password" class="col-form-label">Password:</label>
+                            <input class="form-control" id="login-password" type="password" value="123456"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary login-btn">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="register-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Register</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="reg-name" class="col-form-label">Name:</label>
+                            <input type="text" class="form-control" id="reg-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg-user-name" class="col-form-label">Username:</label>
+                            <input type="text" class="form-control" id="reg-user-name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="profile-image" class="col-form-label">Profile Image:</label>
+                            <input type="file" class="form-control" id="profile-image" value="">
+                        </div>
+                        <div class="mb-3">
+                            <label for="reg-password" class="col-form-label">Password:</label>
+                            <input class="form-control" id="reg-password" type="password"></input>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary reg-btn">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Nav Bar -->
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <div class="col-12 col-lg-9">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm p-3 mb-5 rounded">
+                    <div class="container-fluid">
+                        <a class="navbar-brand fw-bold" href="home.html">Social ELIMR</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="profile.html">Profile</a>
+                                </li>
+                            </ul>
+                            <div class="form-btns d-flex justify-content-end">
+                                <button class="btn btn-outline-primary me-2" type="submit" data-bs-toggle="modal"
+                                    data-bs-target="#login-modal" data-bs-whatever="@mdo">Login</button>
+                                <button class="btn btn-outline-primary" type="submit" data-bs-toggle="modal"
+                                    data-bs-target="#register-modal" data-bs-whatever="@fat">Register</button>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="d-none after-sign me-2 d-flex align-items-center">
+                                    <img src="./images/Profile-test.jpg" alt="Profile Picture" class="rounded-circle"
+                                        style="width: 30px; height: 30px;">
+                                    <span class="ml-2 ms-2 fw-bold"></span>
+                                </div>
+                                <div class="d-none logout-btn" style="width: fit-content;">
+                                    <button class="btn btn-outline-danger" type="submit">Logout</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Post Details -->
+    <div class="postDetails">
+    </div>
+
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <!-- File Popper JS -->
+    <script src="./node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <!-- File Boot Strap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- File Master JS -->
+    <script src="./js/main.js"></script>
+    <!-- File Post JS -->
+    <script src="./js/post.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+body{
+    background-color: #f0ecff;
+}
+
+/* Start Post Card */
+.card-body {
+    cursor: pointer;
+}
+
+.user-card-body {
+    user-select: none;
+}
+
+#comment-input {
+    background-color: white;
+    height: 60px;
+
+    & input {
+        width: 90%;
+        outline: none;
+        background-color: rgb(235, 235, 235);
+    }
+
+    & button {
+        width: 10%;
+    }
+
+}
+
+@media (max-width: 767px) {
+    #comment-input {
+        background-color: white;
+        height: 50px;
+
+        & button {
+            width: auto;
+            font-size: 16px;
+        }
+    }
+}
+
+.card-body {
+    & img {
+        max-height: 650px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+/* End Post Card */
+
+/* Start Profile Content */
+.number-info {
+    font-size: 28px;
+    font-weight: 600;
+}
+
+#main-info-image {
+    width: 180px;
+    height: 180px;
+}
+
+@media (max-width: 991px) {
+    #main-info {
+        margin-bottom: 20px;
+    }
+}
+
+/* End Profile Content */
+
+/* Start Alert toast */
+.success-toast {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translateX(-50%);
+    transition: 0.5s;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.toast {
+    z-index: 99999;
+}
+
+.toast.show {
+    display: block;
+}
+
+/* End Alert toast */
+
+/* After sign Div */
+.after-sign {
+    width: fit-content;
+}
+
+/* Start scroll-btn */
+.scroll-btn {
+    position: fixed;
+    right: 60px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    background-color: #0d6efd;
+    text-align: center;
+    font-size: 25px;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    z-index: 999;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #0b5ed7;
+}
+
+@media (max-width: 991px) {
+    .scroll-btn {
+        right: 20px;
+        bottom: 60px;
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .scroll-btn {
+        right: 10px;
+        bottom: 50px;
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+        opacity: 0.3;
+    }
+
+    .scroll-btn:hover {
+        opacity: 1;
+    }
+}
+
+#add-post-modal {
+    & #post-body {
+        resize: none;
+        height: 100px;
+    }
+}
+
+/* End Add Post Btn */
+
+
+/* Some Customize */
+.dropdown-toggle::after {
+    display: none;
+}
+
+
+@media (max-width: 991px) {
+    body {
+        margin: 0 40px;
+    }
+}
+
+.comment-area {
+    background-color: #eee;
+}
+
+.card-body-add-post {
+    background-color: #f8f8f8;
+}
+
+.first-add-photo,
+.second-add-article {
+    flex: 1;
+}
+
+a {
+    cursor: pointer;
+}
+
+.add-post-img {
+    cursor: pointer;
+}
+
+.target-profile {
+    cursor: pointer;
+}
